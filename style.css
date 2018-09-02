@@ -3,6 +3,10 @@
     stroke-width: 2;
 }
 
+.graph-edge.highlighted {
+    stroke-width: 6;
+}
+
 .graph-node circle {
     fill: #cc9b6a;
     stroke: black;
@@ -10,10 +14,29 @@
     r: 20;
 }
 
+.graph-node .outline {
+    fill: none;
+    r: 25;
+}
+
 .graph-node text {
     text-anchor: middle;
     font-size: 1.5em;
     transform: translate(0, 0.35em);
+    pointer-events: none;
+    fill: black;
+}
+
+.graph-node text.negative {
+    fill: darkred;
+}
+
+#inputs {
+    list-style: none;
+}
+
+#inputs li {
+    padding-bottom: 0.5em;
 }
 
 body {
