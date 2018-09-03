@@ -11,12 +11,10 @@
     fill: #cc9b6a;
     stroke: black;
     stroke-width: 2;
-    r: 20;
 }
 
 .graph-node .outline {
     fill: none;
-    r: 25;
 }
 
 .graph-node text {

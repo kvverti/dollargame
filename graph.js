@@ -110,7 +110,7 @@ function generateGraph(num, surplus, range) {
         .on("mouseover", handleHover)
         .on("mouseout", handleHoverEnd)
         .attr("class", "graph-node")
-        .call(sel => sel.append("circle"))
+        .call(sel => sel.append("circle").attr("r", 20))
         .call(sel => sel.append("text"))
       .merge(nodes)
         .call(drag)
@@ -166,7 +166,8 @@ function resetStats() {
 function handleHover(d) {
     var affected = nodes.filter(d1 => d1 === d || d.adj.indexOf(d1) >= 0);
     affected.append("circle")
-        .attr("class", "outline");
+        .attr("class", "outline")
+        .attr("r", 25);
     edges.filter(d1 =>
             (d1.source === d || d1.target === d)
          && affected.data().indexOf(d1.source) >= 0
